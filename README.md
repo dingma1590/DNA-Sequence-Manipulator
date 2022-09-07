@@ -1,3 +1,3 @@
-# Project DNA
+# DNA-Sequence-Manipulator
 
- DNA validation, transcription, reverse, compliment, translation, reading frame prediction
+ This is a program that receives a DNA sequence as a string input, and perform actions such as DNA validation, transcription, reverse, compliment, translation, reading frame prediction on the given sequence.

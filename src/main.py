@@ -1,6 +1,7 @@
+from exceptions import *
 
-def validate_sequence(seq: str) -> bool:
-    """Return true if seq is a valid DNA sequence, false otherwise
+def validate_seq(seq: str) -> bool:
+    """Returns true if seq is a valid DNA sequence, false otherwise
     
     A DNA sequence is valid if it contains only the letters A, C, G and T
     """
@@ -16,4 +17,29 @@ def validate_sequence(seq: str) -> bool:
             return False
         else:
             pass
+
     return True
+
+
+def reverse_seq(seq: str) -> str:
+    """
+    Returns the reverse of the given sequence
+    """
+    result = ""
+    index = -1
+    for s in range(len(seq)):
+        result += seq[index - s]
+
+    return result
+
+def main():
+    try:
+        seq = str(input("Enter a DNA sequence: "))
+        if (validate_seq(seq)) == False:
+            raise InvalidSequenceError
+        print("Reverse: "+ reverse_seq(seq))
+    except InvalidSequenceError:
+        print("Invalid DNA sequence, please try again")
+        main()
+
+# main()
