@@ -1,4 +1,4 @@
-from main import *
+from functions import *
 
 def test_validate():
     assert validate_seq("") == False
@@ -9,3 +9,4 @@ def test_validate():
 
 def test_reverse():
     assert reverse_seq("ACTTAGGATTTTACTTCACC") == "CCACTTCATTTTAGGATTCA"
+    assert reverse_seq("cgatagcatt") == "ttacgatagc"
