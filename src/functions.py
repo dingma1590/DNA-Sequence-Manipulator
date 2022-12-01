@@ -158,7 +158,7 @@ def seq_reading_frame(seq: str, mode: int, offset: int) -> str:
     """
     Returns the reading frame of the given sequence with offset, highlights any start/stop codons
 
-    Extra nucleotides are appended to the beggining/end of the result, a space is inserted between each codon
+    Extra nucleotides are appended to the beginning/end of the result, a space is inserted between each codon
     """
     if mode == 1:
         seq = complement_seq(seq)
